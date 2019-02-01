@@ -12,13 +12,15 @@ function fcl_product_components_preprocess_gne_reference_pane(&$vars) {
   $product = $vars['product'];
 
   //If the “One way airfare” is checked then only  “GNE reference value” is there else nothing will come up.
-  if (isset($product->gne_reference)) {
-      $vars['Gne'] = [
+  if (isset($product->gne_reference) && isset($product->oneway_flag)) {
+      $vars['gne_reference'] = [
         'content' => [
-          '#markup' => t('@Gne', ['@Gne' => $product->gne_reference]),
+          '#markup' => t('@gne_reference', ['@gne_reference' => $product->gne_reference]),
         ],
         'classes' => 'gne-reference-pane',
-        'label' => 'GNE:',
+        'content_class' => 'gne-reference-pane__content',
+        'title_class' => 'gne-reference-pane__title',
+        'label' => t('GNE:'),
       ];
   }
 
