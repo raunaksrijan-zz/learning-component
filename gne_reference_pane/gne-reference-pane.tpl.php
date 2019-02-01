@@ -14,6 +14,7 @@
       <?php print render($gne_reference['label']); ?>
     </span>
   <?php endif; ?>
+
   <?php  if(isset($gne_reference['content']) && isset($gne_reference['content_class'])):  ?>
     <span class="<?php print render($gne_reference['content_class']); ?>">
        <?php print render($gne_reference['content']); ?>
