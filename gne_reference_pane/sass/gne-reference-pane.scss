@@ -1,13 +1,13 @@
 // Default component class.
 .gne-reference-pane {
     background: $color-neutral-s30;
-    padding: rem-calc(16px);
+    color: rgba(0, 0, 0, 0.87);
     font-size: rem-calc(14px);
+    font-weight: rem-calc(20px);
     line-height: rem-calc(20px);
     letter-spacing: 0.01em;
-    font-weight: rem-calc(20px)t;
-    color: rgba(0, 0, 0, 0.87);
     margin-top: 2%;
+    padding: rem-calc(16px);
 
     &__title {
         font-weight: bold;
